@@ -12,9 +12,9 @@
  * @function add_node
  * @brief Create a new node and add it to the list.
  */
-void add_node(int add_data, node** head)
+void add_node(int add_data, s_node** head)
 {
-	node *newnode = (node*) malloc(sizeof(node));
+	s_node* newnode = (s_node*) malloc(sizeof(s_node));
 	newnode->data = add_data;
 	newnode->next = NULL;
 	if(*head) {
@@ -27,9 +27,9 @@ void add_node(int add_data, node** head)
  * @function display_list
  * @brief Print the single linked list.
  */
-void display_list(node* head)
+void display_list(s_node* head)
 {
-	node* current = head;
+	s_node* current = head;
 	while(current) {
 		printf("[%d]-->", current->data);
 		current = current->next;
@@ -41,10 +41,10 @@ void display_list(node* head)
  * @@function find_remove_loop
  * @brief Remove all duplicate nodes in the list
  */
-int find_remove_loop(node** head)
+int find_remove_loop(s_node** head)
 {
-	node* first = (*head);
-	node* second = (*head);
+	s_node* first = (*head);
+	s_node* second = (*head);
 	int i = 0, dup = -1;
 	int loop_nodes_count = 1;
 	
@@ -96,10 +96,10 @@ int find_remove_loop(node** head)
  * @function remove_node
  * @brief Removes node with given data.
  */
-void remove_node(int remove_data, node** head)
+void remove_node(int remove_data, s_node** head)
 {
-	node* current = (*head);
-	node* previous = current;
+	s_node* current = (*head);
+	s_node* previous = current;
 	
 	/*1. if Head is not null and the node to be removed is HEAD*/
 	if( (*head) && (remove_data == (*head)->data) ) {
@@ -124,9 +124,9 @@ void remove_node(int remove_data, node** head)
  * @brief Removes the node by traversing the list recursively
  * Usage: head = remove_recursive(<x>, &head);
  */
-node* remove_node_recursive(int remove_data, node** head)
+s_node* remove_node_recursive(int remove_data, s_node** head)
 {
-	node* temp = NULL;
+	s_node* temp = NULL;
 	if (!(*head))
 		return (*head);
 	
@@ -144,11 +144,11 @@ node* remove_node_recursive(int remove_data, node** head)
  * @function reverse_list
  * @brief Reverse the given single linked list
  */
-void reverse_list(node** head)
+void reverse_list(s_node** head)
 {
-	node* previous = NULL;
-	node* current = (*head);
-	node* next = NULL;
+	s_node* previous = NULL;
+	s_node* current = (*head);
+	s_node* next = NULL;
 	
 	while(current){
 		next = current->next;  /* first store the next node */
@@ -163,10 +163,10 @@ void reverse_list(node** head)
  * @function reverse_list_recursive
  * @brief Reverse the linked list recursively
  */
-void reverse_list_recursive(node** head)
+void reverse_list_recursive(s_node** head)
 {
-	node* current = NULL;
-	node* next = NULL;
+	s_node* current = NULL;
+	s_node* next = NULL;
 	if(!(*head)) {
 		return;
 	}
@@ -189,11 +189,11 @@ void reverse_list_recursive(node** head)
  * If INPUT list is - 1 2 3 4 5 6 7 8 and group_count is 3 then
  * OUTPUT Will be   - 3 2 1 6 5 4 8 7
  */
-node* reverse_list_group(int group_count, node** head)
+s_node* reverse_list_group(int group_count, s_node** head)
 {
-	node* previous = NULL;
-	node* current = (*head);
-	node* next = NULL;
+	s_node* previous = NULL;
+	s_node* current = (*head);
+	s_node* next = NULL;
 	int count = 0;
 	
 	if (group_count <= 0)

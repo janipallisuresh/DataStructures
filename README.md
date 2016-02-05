@@ -9,7 +9,7 @@ You can use below make command which generates the executable.
 OR
 Simply you can run following gcc command to build.
   - gcc singlelinkedlist.c s_main.c -o singlelinkedlist -Wall
-  - gcc doublelinkedlist.c d_main -o doublelinkedlist -wall
+  - gcc doublelinkedlist.c d_main.c -o doublelinkedlist -wall
 
 HOW TO RUN:
 

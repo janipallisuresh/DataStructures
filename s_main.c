@@ -7,9 +7,9 @@
 int main()
 {
 	int i=10;
-	node* head = NULL;
-	node* temp = NULL;
-	node* temp1 = NULL;
+	s_node* head = NULL;
+	s_node* temp = NULL;
+	s_node* temp1 = NULL;
 	int count = 1;
 	
 	remove_node(4, &head);
