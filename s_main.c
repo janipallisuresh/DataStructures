@@ -1,6 +1,9 @@
 /* Testing Single Linked List Code */
 #include "singlelinkedlist.h"
 
+/**
+* @brief Testing the functionality of Single linked list.
+*/
 int main()
 {
 	int i=10;
@@ -34,14 +37,14 @@ int main()
 	
 	/* make a loop to test the function */
 	temp = head;
-	while(temp->link != NULL) 
+	while(temp->next != NULL) 
 	{
 	    if(count == 4)
 	     temp1 = temp;
-	    temp = temp->link;
+	    temp = temp->next;
 	    count++;
 	}
-	temp->link = temp1;
+	temp->next = temp1;
 
 	printf("Loop at Node: %d\n", find_remove_loop(&head));
 	display_list(head);
