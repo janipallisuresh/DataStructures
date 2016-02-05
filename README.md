@@ -1,20 +1,24 @@
 # Build and Execute.
 HOW TO BUILD:
+
 You can use below make command which generates the executable.
   - make all - To build all the programs.
-  - make sll - To build Single linked list program
+  - make sll - To build Single linked list program.
   - make dll - To build double linked list program.
-  OR
+
+OR
 Simply you can run following gcc command to build.
   - gcc singlelinkedlist.c s_main.c -o singlelinkedlist -Wall
   - gcc doublelinkedlist.c d_main -o doublelinkedlist -wall
 
 HOW TO RUN:
+
 The executables that generated are
   - singlelinkedlist
   - doublelinkedlist 
 
 HOW TO BUILD AND LINK SHARED OBJECTS:
+
 You can build the shared objects and link them to your own executable.
 
   - make sll_shared - Generates libsll.so
