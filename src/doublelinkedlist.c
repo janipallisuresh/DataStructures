@@ -103,6 +103,23 @@ void add_node_at(int data, int at_loc, d_node** head)
 }
 
 /**
+* @function delete_list
+* @brief Delete the entire list starting from Head node.
+*/
+void delete_list(d_node** head)
+{
+	d_node* move = (*head);
+
+	while(move) {
+		move = (*head)->next;
+		free((*head));
+		(*head) = move;
+	}
+	(*head) = NULL;
+	printf("LIST IS DELETED\n");
+}
+
+/**
 * @function display_list
 * @brief Print the list starting from Head node.
 */
@@ -182,6 +199,8 @@ void remove_node(int data, d_node** head)
 */
 void remove_node_front(d_node** head)
 {
+	if(!(*head))
+		return;
 	remove_node((*head)->data, head);
 }
 

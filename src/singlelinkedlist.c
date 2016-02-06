@@ -14,6 +14,15 @@
  */
 void add_node(int add_data, s_node** head)
 {
+	add_node_end(add_data, head);
+}
+
+/**
+ * @function add_node_front
+ * @brief Create a new node and add it at the begining of the list.
+ */
+void add_node_front(int add_data, s_node** head)
+{
 	s_node* newnode = (s_node*) malloc(sizeof(s_node));
 	newnode->data = add_data;
 	newnode->next = NULL;
@@ -21,6 +30,43 @@ void add_node(int add_data, s_node** head)
 		newnode->next = *head;
 	}
 	*head = newnode;
+}
+
+/**
+ * @function add_node
+ * @brief Create a new node and add it at the end of the list.
+ */
+void add_node_end(int add_data, s_node** head)
+{
+	s_node* move = (*head);
+	s_node* newnode = (s_node*) malloc(sizeof(s_node));
+	newnode->data = add_data;
+	newnode->next = NULL;
+	if(!(*head)) {
+		(*head) = newnode;
+		return;
+	}
+	while(move->next) {
+		move = move->next;
+	}
+	move->next = newnode;
+}
+
+
+/**
+ * @function delete_list
+ * @brief delete entire list.
+ */
+void delete_list(s_node** head)
+{
+	s_node* move = NULL;
+	while((*head)) {
+		move = (*head)->next;
+		free((*head));
+		*head = move;
+	}
+	(*head) = NULL;
+	printf("LIST IS DELETED\n");
 }
 
 /**

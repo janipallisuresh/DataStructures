@@ -28,6 +28,8 @@ void add_node_front(int data, d_node** head);
 void add_node_end(int data, d_node** head);
 void add_node_at(int data, int loc, d_node** head);
 
+void delete_list(d_node** head);
+
 void display_list(d_node* head);
 void display_reverse_list(d_node* head);
 

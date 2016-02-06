@@ -29,6 +29,7 @@ int main(int argc, char* argv[])
     }
     display_list(head);
     display_reverse_list(head);
+    delete_list(&head);
     return 0;
 
 }

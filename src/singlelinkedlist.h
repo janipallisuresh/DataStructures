@@ -22,6 +22,9 @@ typedef struct s_node {
 } s_node;
 
 void add_node(int add_data, s_node** head);
+void add_node_end(int add_data, s_node** head);
+void add_node_front(int add_data, s_node** head);
+void delete_list(s_node** head);
 void display_list(s_node* head);
 int find_remove_loop(s_node** head);
 void remove_node(int remove_data, s_node** head);

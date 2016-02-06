@@ -49,5 +49,6 @@ int main()
 	printf("Loop at Node: %d\n", find_remove_loop(&head));
 	display_list(head);
 	printf("Loop at Node: %d\n", find_remove_loop(&head));
+	delete_list(&head);
 	return 0;
 }
