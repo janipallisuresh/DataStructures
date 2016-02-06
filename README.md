@@ -40,4 +40,4 @@ If your in the current directory where libsll.so/libdll.so is present then
 Now run the executable
   - ./s_main - (you may have to add the path to libsll.so to your env variable LD_LIBRARY_PATH)
 
-<i>For more detials please visit: <u>http://janipallisuresh.github.io/MyDs_Doc/index.html</u> </i>
+<i>For more detials please visit: http://janipallisuresh.github.io/MyDs_Doc/index.html </i>
